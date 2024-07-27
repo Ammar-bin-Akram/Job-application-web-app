@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+<div id="details-form">
+	<div class='fieldset'>
+    <legend>Provide Details!</legend>
+		<form action="/run-bot" method="post" enctype="multipart/form-data">
+			<div class='row'>
+				<label for='email'>Account Email</label>
+				<input type="text" placeholder="Email" name='account-email' id='email' data-required="true" data-error-message="Account email is required" required>
+			</div>
+			<div class='row'>
+				<label for="password">Account Password</label>
+				<input type="password" placeholder="Password" id="password" name='account-password' data-required="true" data-error-message="Account password is required" required>
+			</div>
+			<div class='row'>
+				<label for="keyword">Search keyword</label>
+				<input type="text" placeholder="Keyword" name='search-keyword' id="keyword" data-required="true" data-error-message="Keyword is required" required>
+			</div>
+			<div class='row'>
+				<label for="country">Country</label>
+				<input type="text" placeholder="Country" name='search-country' id="country" data-required="true" data-error-message="Country is required">
+			</div>
+			<div class='row'>
+				<label for="file-upload">Choose File</label>
+				<input type="file" placeholder="Country" name='file' id="file-upload" data-required="true" data-error-message="File is required" required>
+			</div>
+			<input type="submit" value="Run Bot">
+		</form>
+	</div>
+</div>
+{% endblock content %}
